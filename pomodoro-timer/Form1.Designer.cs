@@ -30,6 +30,7 @@ namespace pomodoro_timer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.resetBtn = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@ namespace pomodoro_timer
             // 
             // timer1
             // 
-            this.timer1.Interval = 40;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // resetBtn
@@ -258,6 +259,7 @@ namespace pomodoro_timer
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.timeLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Pomodoro Timer";
             this.tableLayoutPanel1.ResumeLayout(false);
